@@ -2,7 +2,9 @@ package stepdefs;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.assertj.core.api.Assertions;
 import org.example.MainPage;
 
 public class MainPageStepsDefinitions {
@@ -25,7 +27,38 @@ public class MainPageStepsDefinitions {
     }
 
     @When("I click on login")
-    public void iClickOnLogin(){
+    public void iClickOnLogin() {
         mainPage.clickOnLogin();
     }
+
+    @When("I hover over Desktops")
+    public void iHoverOverDesktops() {
+        mainPage.hoverOverDesktops();
+    }
+
+    @When("I click on Desktops")
+    public void iClickOnDesktops() {
+        mainPage.clickOnDesktops();
+    }
+
+    @When("I click on Show All Desktops")
+    public void iClickOnShowAllDesktops() {
+        mainPage.clickOnShowAllDesktops();
+    }
+
+    @Then("I check a current currency sign")
+    public void iCheckCurrencySign(){
+        String actualResult = mainPage.getCurrencySign();
+        String expectedResult = "$";
+
+        Assertions.assertThat(actualResult)
+                .as("fail")
+                .isEqualTo(expectedResult);
+    }
+
+    @When("I click on Iphone on Main Page")
+    public void iClickOnIphone(){
+        mainPage.clickOnIPhone();
+    }
 }
+

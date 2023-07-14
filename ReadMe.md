@@ -22,7 +22,7 @@ Test #2
 5. Check that value in Sort By is Default
 6. Check that 10 products display on page
 7. Select 25 from Show dropdown
-8. Check that 12 products now dispayed
+8. Check that 12 products now displayed
 9. Check that text 'Showing 1 to 12 of 12 (1 Pages)' displays on the bottom of the page
 
 Test#2_1
@@ -45,13 +45,13 @@ Test #3
 
 Test #4
 1. Go to the https://demo.opencart.com/
-2. On the main page check that current currency is $ (change to $ id not)
+2. On the main page check that current currency is $ (change to $ if not)
 3. Click on the Iphone
 4. Check that price 123.20
 5. Change currency to euro
-6. Chekk that price 106.04
+6. Chekk that price 112.45
 7. Change currency to Pound Sterling
-8. Check that price 95.32
+8. Check that price 96.41
 
 Test #5
 1. Go to the https://demo.opencart.com/
