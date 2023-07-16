@@ -30,6 +30,9 @@ public class MainPage extends BasePage{
     @FindBy(xpath = "//div[@class='product-thumb']//a[text()='iPhone']")
     private WebElement iPhoneOnMainPage;
 
+    @FindBy(xpath = "//a[@class='nav-link' and text()='Cameras']")
+    private WebElement cameras;
+
     public MainPage() {
         PageFactory.initElements(getDriver(), this);
     }
@@ -76,6 +79,11 @@ public class MainPage extends BasePage{
         JavascriptExecutor executor = (JavascriptExecutor) driver;
         executor.executeScript("arguments[0].click()", iPhoneOnMainPage);
         return new IphonePage();
+    }
+
+    public CamerasPage clickOnCameras(){
+        cameras.click();
+        return new CamerasPage();
     }
 
 }

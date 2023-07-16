@@ -60,5 +60,8 @@ public class MainPageStepsDefinitions {
     public void iClickOnIphone(){
         mainPage.clickOnIPhone();
     }
+
+    @When("I click on Cameras")
+    public void iClickOnCameras(){mainPage.clickOnCameras();}
 }
 
